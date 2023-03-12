@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D8 Clone Netflix</title>
+    <!---richiamo figli di stile-->
+    <link rel="stylesheet" href="style.css" />
+    <!--favicon-->
+    <link rel="icon" href="assets/favicon.ico">
+    <!--CDN boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!--CDN icone boostrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+
+<body class="bg-dark">
+    <!--NAVBAR-->
+    <nav class="navbar bg-dark fixed-top navbar-expand-lg text-white d-flex">
+        <!--navbar fissa allo scroll-->
+        <div class="container fluid">
+            <!-- se rimuovo container fluid non occupa più il 100%-->
+            <a class="navbar-brand" href="#">
+                <img src="assets/Logo.png" alt="LogoNetflix" width="auto" height="50">
+            </a>
+            <!--hamburger menu compare sotto i 900px per rendere più agevole l'interazione con i dispositivi di piccole dimensioni-->
+            <button class="navbar-toggler bg-danger text-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item me-2">
+                        <a class="nav-link text-white" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">TV Shows</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Recently Added</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">My List</a>
+                    </li>
+                </ul>
+                <div class="row g-3">
+                    <!--icona search-->
+                    <div class="col d-none d-sm-block">
+                        <i class="bi bi-search" style="font-size: 1rem; color: white;"></i>
+                    </div>
+                    <!--icona bell-->
+                    <div class="col d-none d-sm-block">
+                        <i class="bi bi-bell" style="font-size: 1rem; color: white;"></i>
+                    </div>
+                    <div class="col d-none d-sm-block">
+                        <!--icona person-->
+                        <i class="bi bi-person-circle" style="font-size: 1rem; color: white;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- header -->
+    <header class="d-flex justify-content-between bg-dark align-items-center">
+        <!---esiste align-items-baseline?-->
+
+        <div class="container">
+            <!--TV Shows - buttonGenres - iconElenco -->
+            <div class="d-flex mb-3">
+                <div class="p-2 text-white">
+                    <h3>TV Shows</h3>
+                </div>
+                <div class="p-2 text-white"><button type="button" class="btn btn-dark bg-dark text-white"
+                        style="border-radius: 0; border: 0.1em solid">Genres <i class="bi bi-caret-down-fill"
+                            style="color: white"></i></button></div>
+                <div class="col-sm-6"></div>
+                <div class="ms-auto p-2 text-white"><i class="bi bi-list-ul" style="color: white"></i></div>
+                <div class="p-2 text-white"><i class="bi bi-grid" style="color: white"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!--SLIDERS-->
+        <div class="container">
+            <!--Trending Now-->
+            <div class="row" id="trendingNow">
+                <h6 class="text-white mt-2">Trending Now</h6>
+                <div class="row g-0">
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+                        <img src="assets/1.png" alt="sm-poster01" class="row_poster">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+                        <img src="assets/2.png" alt="sm-poster02" class="row_poster">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+                        <img src="assets/3.png" alt="sm-poster03" class="row_poster">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+                        <img src="assets/4.png" alt="sm-poster04" class="row_poster">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+                        <img src="assets/5.png" alt="sm-poster05" class="row_poster">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+                        <img src="assets/6.png" alt="sm-poster06" class="row_poster">
+                    </div>
+                </div>
+            </div>
+
+            <!--Watch It Again-->
+            <div class="row" id="watchItAgain">
+                <h6 class="text-white mt-2">Watch It Again</h6>
+                <div class="row g-0">
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+                        <img src="assets/7.png" alt="sm-poster01" class="row_poster">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+                        <img src="assets/8.png" alt="sm-poster02" class="row_poster">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+                        <img src="assets/9.png" alt="sm-poster03" class="row_poster">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+                        <img src="assets/10.png" alt="sm-poster04" class="row_poster">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+                        <img src="assets/11.png" alt="sm-poster05" class="row_poster">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+                        <img src="assets/12.png" alt="sm-poster06" class="row_poster">
+                    </div>
+                </div>
+            </div>
+
+            <!--New Relases-->
+            <div class="row" id="newRelases">
+                <h6 class="text-white mt-2">New Relases</h6>
+                <div class="row g-0">
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+                        <img src="assets/13.png" alt="sm-poster01" class="row_poster">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+                        <img src="assets/14.png" alt="sm-poster02" class="row_poster">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+                        <img src="assets/15.png" alt="sm-poster03" class="row_poster">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+                        <img src="assets/16.png" alt="sm-poster04" class="row_poster">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+                        <img src="assets/17.png" alt="sm-poster05" class="row_poster">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+                        <img src="assets/18.png" alt="sm-poster06" class="row_poster">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--footer-->
+    <footer class="mt-5 pt-5 mb-5">
+        <div class="container">
+            <div class="row my-3">
+                <div class="col-12 col-sm-6">
+                    <a href="#"><i class="bi bi-facebook fs-4 me-3" style="color: lightgray"></i></a>
+                    <a href="#"><i class="bi bi-instagram fs-4 me-3" style="color: lightgray"></i></a>
+                    <a href="#"><i class="bi bi-twitter fs-4 me-3" style="color: lightgray"></i></a>
+                    <a href="#"><i class="bi bi-youtube fs-4 me-3" style="color: lightgray"></i></a>
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="#" class="text-decoration-none text-white-50">Audio and Subtitles</a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="#" class="text-decoration-none text-white-50">Audio Description</a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="#" class="text-decoration-none text-white-50">Help Center</a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="#" class="text-decoration-none text-white-50">Gift Cards</a>
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="#" class="text-decoration-none text-white-50">Media Center</a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="#" class="text-decoration-none text-white-50">Investor Relations</a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="#" class="text-decoration-none text-white-50">Jobs</a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="#" class="text-decoration-none text-white-50">Term of Use</a>
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="#" class="text-decoration-none text-white-50">Privacy</a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="#" class="text-decoration-none text-white-50">Legal Notices</a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="#" class="text-decoration-none text-white-50">Cookie Preferencies</a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="#" class="text-decoration-none text-white-50">Corporate Information</a>
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col-4">
+                    <a href="#" class="text-decoration-none text-white-50">Contact Us</a>
+                </div>
+            </div>
+            <div class="row mt-4 mb-3">
+                <div class="col-md-12 col-lg-4">
+                    <button class="bg-dark text-white-50 border border-1 border-white">Service Code</button>
+                </div>
+            </div>
+            <div class="row my-2 mt-5">
+                <div class="col-12 text-white">
+                    <span>© 2023. M3 W4-P2 Netflix Clone</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<!--CDN bootstraps JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
