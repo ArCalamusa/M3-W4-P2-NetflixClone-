@@ -53,15 +53,15 @@
                 <div class="row g-3">
                     <!--icona search-->
                     <div class="col d-none d-sm-block">
-                        <i class="bi bi-search" style="font-size: 1rem; color: white;"></i>
+                        <a href="#"><i class="bi bi-search" style="font-size: 1rem; color: white;"></i></a>
                     </div>
                     <!--icona bell-->
                     <div class="col d-none d-sm-block">
-                        <i class="bi bi-bell" style="font-size: 1rem; color: white;"></i>
+                        <a href="#"><i class="bi bi-bell" style="font-size: 1rem; color: white;"></i></a>
                     </div>
                     <div class="col d-none d-sm-block">
                         <!--icona person-->
-                        <i class="bi bi-person-circle" style="font-size: 1rem; color: white;"></i>
+                        <a href="#"><i class="bi bi-person-circle" style="font-size: 1rem; color: white;"></i></a>
                     </div>
                 </div>
             </div>
@@ -78,9 +78,21 @@
                 <div class="p-2 text-white">
                     <h3>TV Shows</h3>
                 </div>
-                <div class="p-2 text-white"><button type="button" class="btn btn-dark bg-dark text-white"
-                        style="border-radius: 0; border: 0.1em solid">Genres <i class="bi bi-caret-down-fill"
-                            style="color: white"></i></button></div>
+                <!--Dropdown bottone -->
+                <div class="p-2 text-white">
+                    <div class="dropdown">
+                        <button class="btn btn-dark bg-dark text-white" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                            style="border-radius: 0; border: 0.1em solid">
+                            Genres <i class="bi bi-caret-down-fill" style="color: white"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Azione e Avventura</a></li>
+                            <li><a class="dropdown-item" href="#">Commedia</a></li>
+                            <li><a class="dropdown-item" href="#">Film cult</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--icone list e grid -->
                 <div class="col-sm-6"></div>
                 <div class="ms-auto p-2 text-white"><i class="bi bi-list-ul" style="color: white"></i></div>
                 <div class="p-2 text-white"><i class="bi bi-grid" style="color: white"></i></div>
@@ -228,7 +240,27 @@
             </div>
             <div class="row mt-4 mb-3">
                 <div class="col-md-12 col-lg-4">
-                    <button class="bg-dark text-white-50 border border-1 border-white">Service Code</button>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="bg-dark text-white-50 border border-1 border-white" data-bs-toggle="modal" data-bs-target="#exampleModal">Service Code
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header bg-dark">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body bg-dark text-white">
+                                    Dai che è venuto bene questo clone 😉
+                                </div>
+                                <div class="modal-footer bg-dark">
+                                    <button type="button" class="btn btn-secondary bg-danger text-dark" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <button class="bg-dark text-white-50 border border-1 border-white">Service Code</button> -->
                 </div>
             </div>
             <div class="row my-2 mt-5">
