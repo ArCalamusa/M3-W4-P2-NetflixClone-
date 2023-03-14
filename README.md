@@ -1,9 +1,7 @@
 # M3-W4-P2-NetflixClone
 Netflix clone  
 
-https://user-images.githubusercontent.com/117526559/224782704-0b7e64dc-f047-4e89-bb3a-26fb11d7e34b.mov
-
-
+https://user-images.githubusercontent.com/117526559/225147258-2a81c713-ffe3-4622-9698-696f49c078a0.mp4
 
 Ricrea la Homepage di Netflix il più fedelmente possibile, prendendo a riferimento l’immagine allegata di seguito 👇
 1.	Usa il grid system di Bootstrap 4.6 e aiutati con i componenti di Bootstrap quando necessario.
